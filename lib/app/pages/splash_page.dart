@@ -1,8 +1,10 @@
 import 'package:dark_week/app/core/ui/helprs/size_extensions.dart';
 import 'package:dark_week/app/core/ui/styles/app_styles.dart';
 import 'package:dark_week/app/core/ui/styles/colors_app.dart';
+import 'package:dark_week/app/core/ui/styles/text_styles.dart';
 
 import 'package:dark_week/app/core/ui/widgets/btn/generic_btn.dart';
+import 'package:dark_week/app/pages/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -21,7 +23,7 @@ class _SplashPageState extends State<SplashPage> {
           Align(
             heightFactor: 2,
             child: SizedBox(
-              width: context.screenWidth * 1,
+              width: context.screenWidth * 0.97,
               child: Image.asset(
                 "assets/images/MultiComp-Banner.png",
                 fit: BoxFit.cover,
@@ -31,12 +33,64 @@ class _SplashPageState extends State<SplashPage> {
           Center(
             child: Column(
               children: [
+                const SizedBox(height: 200),
                 Container(
-                  color: Colors.grey[350],
-                  width: 340,
-                  height: 550,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    color: const Color.fromRGBO(214, 214, 214, 1),
+                  ),
+                  //color: Color.fromRGBO(214, 214, 214, 1),
+                  width: context.screenWidth * 0.94,
+                  height: context.screenHeight * 0.64,
+                  child: Center(
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(top: 40, left: 10, right: 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("SOLUÇÕES PARA SUA EMPRESA",
+                              style: TextStyles.i.textExtraBold
+                                  .copyWith(fontSize: 18)),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.asset("assets/images/baner-01.png",
+                                  width: 180, height: 70),
+                              Image.asset("assets/images/baner-03.png",
+                                  width: 180, height: 70),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.asset("assets/images/baner-02.png",
+                                  width: 180, height: 70),
+                              Image.asset("assets/images/baner-04.png",
+                                  width: 180, height: 70),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.asset("assets/images/baner-06.png",
+                                  width: 180, height: 70),
+                              Image.asset("assets/images/baner-05.png",
+                                  width: 180, height: 70),
+                            ],
+                          ),
+                          GenericBtn(
+                            width: context.percentWidth(.7),
+                            height: 35,
+                            label: "ACESSAR",
+                            onPressed: () {},
+                          ),
+                          const SizedBox(height: 8),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-                Image.asset("")
               ],
             ),
           ),
