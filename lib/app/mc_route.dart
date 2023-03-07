@@ -1,8 +1,7 @@
-import 'package:dark_week/app/core/provider/aplication_binding.dart';
+import 'package:dark_week/app/core/ui/provider/aplication_binding.dart';
 import 'package:dark_week/app/core/ui/theme/theme_config.dart';
 import 'package:dark_week/app/pages/splash_page.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class McRoute extends StatelessWidget {
   const McRoute({super.key});
@@ -15,7 +14,7 @@ class McRoute extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.theme,
         routes: {
-          "/": (context) => const SplashPage(),
+          "/": (context) => SplashPage(),
         },
       ),
     );
