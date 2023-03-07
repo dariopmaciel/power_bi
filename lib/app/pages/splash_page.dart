@@ -1,4 +1,4 @@
-import 'package:dark_week/app/core/ui/helprs/size_extensions.dart';
+import 'package:dark_week/app/core/ui/helpers/size_extensions.dart';
 import 'package:dark_week/app/core/ui/styles/app_styles.dart';
 import 'package:dark_week/app/core/ui/styles/colors_app.dart';
 import 'package:dark_week/app/core/ui/styles/text_styles.dart';
