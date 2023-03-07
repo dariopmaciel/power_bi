@@ -4,7 +4,7 @@ import 'package:dark_week/app/core/ui/styles/colors_app.dart';
 import 'package:dark_week/app/core/ui/styles/text_styles.dart';
 
 import 'package:dark_week/app/core/ui/widgets/btn/generic_btn.dart';
-import 'package:dark_week/app/pages/home_page/home_page.dart';
+import 'package:dark_week/app/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
