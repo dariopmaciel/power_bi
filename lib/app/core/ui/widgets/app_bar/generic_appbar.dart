@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class GenericAppbar extends AppBar {
   GenericAppbar({
     super.key,
-    double elevation = 0,
+    double elevation = 1,
+    var child,
   }) : super(
           elevation: elevation,
           backgroundColor: Colors.white,

@@ -20,9 +20,9 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         children: [
           Align(
-            heightFactor: 2,
+            heightFactor: 2.5,
             child: SizedBox(
-              width: context.screenWidth * 0.97,
+              width: context.percentHeight(0.98),
               child: Image.asset(
                 "assets/images/MultiComp-Banner.png",
                 fit: BoxFit.cover,
@@ -32,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
           Center(
             child: Column(
               children: [
-                const SizedBox(height: 200),
+                SizedBox(height: context.percentHeight(0.27)),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
@@ -78,20 +78,23 @@ class _SplashPageState extends State<SplashPage> {
                                   width: 180, height: 70),
                             ],
                           ),
-                          GenericBtn(
-                            width: context.percentWidth(.7),
-                            height: 35,
-                            label: "ACESSAR",
-                            onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => ValidatorPage(),
-                                ),
-                              );
-                            },
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 30),
+                            child: GenericBtn(
+                              width: context.percentWidth(.7),
+                              height: 35,
+                              label: "ACESSAR",
+                              onPressed: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const ValidatorPage(),
+                                  ),
+                                );
+                              },
+                            ),
                           ),
-                          const SizedBox(height: 8),
+                          //SizedBox(height: context.percentHeight(0.02)),
                         ],
                       ),
                     ),
