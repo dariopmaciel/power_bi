@@ -35,25 +35,17 @@ class _HomePageState extends State<HomePage> {
               accountName: Text("Usuário: $nome"),
               accountEmail: Text("E-mail: $email"),
             ),
-            SingleChildScrollView(
-              child: Stack(
-                children: [
-                  GenericBtn(
-                      label: "SAIR",
-                      onPressed: () {
-                        logout();
-                      }),
-                  //GenericBtn(label: "label", onPressed: () {})
-                ],
-              ),
-            ),
           ],
         ),
       ),
-      body: Container(
-          child: Center(
-        child: Text("HOME PAGE"),
-      )),
+      body: Center(
+        child: GenericBtn(
+          label: "SAIR",
+          onPressed: () {
+            logout();
+          },
+        ),
+      ),
     );
   }
 
