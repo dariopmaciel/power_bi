@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:power_bi/app/core/ui/styles/colors_app.dart';
 
 class GenericBtn extends StatelessWidget {
   final String label;
@@ -16,6 +17,7 @@ class GenericBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Colors.red;
     return SizedBox(
       width: 200,
       height: height,

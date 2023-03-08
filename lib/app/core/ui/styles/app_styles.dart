@@ -1,6 +1,7 @@
-import 'package:dark_week/app/core/ui/styles/colors_app.dart';
-import 'package:dark_week/app/core/ui/styles/text_styles.dart';
+
 import 'package:flutter/material.dart';
+import 'package:power_bi/app/core/ui/styles/colors_app.dart';
+import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 
 class AppStyles {
   static AppStyles? _instance;

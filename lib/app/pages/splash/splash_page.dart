@@ -1,11 +1,9 @@
-import 'package:dark_week/app/core/ui/helpers/size_extensions.dart';
-import 'package:dark_week/app/core/ui/styles/app_styles.dart';
-import 'package:dark_week/app/core/ui/styles/colors_app.dart';
-import 'package:dark_week/app/core/ui/styles/text_styles.dart';
-
-import 'package:dark_week/app/core/ui/widgets/btn/generic_btn.dart';
-import 'package:dark_week/app/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:power_bi/app/core/ui/helpers/size_extensions.dart';
+import 'package:power_bi/app/core/ui/styles/colors_app.dart';
+import 'package:power_bi/app/core/ui/styles/text_styles.dart';
+import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
+import 'package:power_bi/app/pages/auth/validator_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -17,6 +15,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
+    context.colors.primary;
     return Scaffold(
       body: Stack(
         children: [
@@ -83,7 +82,14 @@ class _SplashPageState extends State<SplashPage> {
                             width: context.percentWidth(.7),
                             height: 35,
                             label: "ACESSAR",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ValidatorPage(),
+                                ),
+                              );
+                            },
                           ),
                           const SizedBox(height: 8),
                         ],
@@ -94,11 +100,46 @@ class _SplashPageState extends State<SplashPage> {
               ],
             ),
           ),
-
-          //Container(width: 200, height: 200, color: Colors.black),
-          //Container(width: 50, height: 50, color: Colors.grey),
         ],
       ),
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/placeholder.dart';
+// import 'package:power_bi/pages/home/home_page.dart';
+
+// class SplashPage extends StatefulWidget {
+//   const SplashPage({super.key});
+
+//   @override
+//   State<SplashPage> createState() => _SplashPageState();
+// }
+
+// class _SplashPageState extends State<SplashPage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         elevation: 1,
+//       ),
+//       body: Container(
+//         child: Center(
+//           child: ElevatedButton(
+//             onPressed: () {
+//               Navigator.pushReplacement(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) => HomePage(),
+//                 ),
+//               );
+//             },
+//             child: Text("HOME PAGE"),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
