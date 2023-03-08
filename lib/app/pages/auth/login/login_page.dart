@@ -34,143 +34,160 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GenericAppbar(),
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Login",
-                    style:
-                        context.textStyles.textExtraBold.copyWith(fontSize: 30),
-                  ),
-                  SizedBox(height: context.percentHeight(0.03)),
-                  TextFormField(
-                    controller: _emailEC,
-                    keyboardType: TextInputType.emailAddress,
-                    //autofocus: true,
-                    decoration: const InputDecoration(
-                      labelText: "E-mail",
-                      border: OutlineInputBorder(),
+      body: Form(
+        key: formKey,
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: SingleChildScrollView(
+                physics: const NeverScrollableScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: context.percentHeight(0.02)),
+                    Text(
+                      "Login",
+                      style: context.textStyles.textExtraBold
+                          .copyWith(fontSize: 36),
                     ),
-                    validator: Validatorless.multiple(
-                      [
-                        Validatorless.required("E-mail obrigatório!"),
-                        Validatorless.email("E-mail inválido."),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: context.percentHeight(0.05)),
-                  TextFormField(
-                    controller: _pwdEC,
-                    obscureText: _showPWD == false ? true : false,
-                    decoration: InputDecoration(
-                      labelText: "Senha",
-                      border: OutlineInputBorder(),
-                      suffixIcon: GestureDetector(
-                        child: Icon(_showPWD == false
-                            ? Icons.visibility_off
-                            : Icons.visibility),
-                        onTap: () {
-                          setState(
-                            () {
-                              _showPWD = !_showPWD;
-                            },
-                          );
-                        },
+                    SizedBox(height: context.percentHeight(0.03)),
+                    TextFormField(
+                      controller: _emailEC,
+                      keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
+                      decoration: const InputDecoration(
+                        labelText: "E-mail",
+                        border: OutlineInputBorder(),
+                      ),
+                      validator: Validatorless.multiple(
+                        [
+                          Validatorless.required('Email is required'),
+                          Validatorless.email('Invalid email'),
+                        ],
                       ),
                     ),
-                    validator: Validatorless.required("Senha obrigatória!"),
-                  ),
-                  SizedBox(height: context.percentHeight(.08)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      IconButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: () {
-                          //LOGIN DIGITAL
-                          //LOGIN DIGITAL
-                          //LOGIN DIGITAL
-                          //LOGIN DIGITAL
-                          //LOGIN DIGITAL
-                        },
-                        icon: SvgPicture.asset(
-                          "assets/icons/finger_print.svg",
-                          height: 100,
-                          width: 100,
+                    SizedBox(height: context.percentHeight(0.05)),
+                    TextFormField(
+                      controller: _pwdEC,
+                      obscureText: _showPWD == false ? true : false,
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.done,
+                      onFieldSubmitted: (value) => login(),
+                      decoration: InputDecoration(
+                        labelText: "Senha",
+                        border: OutlineInputBorder(),
+                        suffixIcon: GestureDetector(
+                          child: Icon(_showPWD == false
+                              ? Icons.visibility_off
+                              : Icons.visibility),
+                          onTap: () {
+                            setState(
+                              () {
+                                _showPWD = !_showPWD;
+                              },
+                            );
+                          },
                         ),
                       ),
-                      IconButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: () {
-                          // LOGIN CONTA APPLE
-                          // LOGIN CONTA APPLE
-                          // LOGIN CONTA APPLE
-                          // LOGIN CONTA APPLE
-                          // LOGIN CONTA APPLE
-                        },
-                        icon: SvgPicture.asset("assets/icons/apple.svg",
-                            height: 100, width: 100),
-                      ),
-                      IconButton(
+                      validator: Validatorless.multiple([
+                        Validatorless.required('Password is required'),
+                        Validatorless.min(
+                            6, 'Password must be at least 6 characters'),
+                        Validatorless.max(
+                            20, 'Password must be at most 20 characters'),
+                      ]),
+                    ),
+                    SizedBox(height: context.percentHeight(.08)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        IconButton(
                           padding: EdgeInsets.zero,
                           onPressed: () {
-                            //LOGIN CONTA GOOGLE
-                            //LOGIN CONTA GOOGLE
-                            //LOGIN CONTA GOOGLE
-                            //LOGIN CONTA GOOGLE
-                            //LOGIN CONTA GOOGLE
+                            //LOGIN DIGITAL
+                            //LOGIN DIGITAL
+                            //LOGIN DIGITAL
+                            //LOGIN DIGITAL
+                            //LOGIN DIGITAL
                           },
-                          icon: SvgPicture.asset("assets/icons/gmail-80.svg",
-                              height: 100, width: 100)),
-                    ],
-                  ),
-                  SizedBox(height: context.percentHeight(.08)),
-                  Center(
-                    child: GenericBtn(
-                      label: "LOGIN",
-                      onPressed: () {
-                        //LOGIN EMAIL + SENHA REGISTRADA
-                        //LOGIN EMAIL + SENHA REGISTRADA
-                        //LOGIN EMAIL + SENHA REGISTRADA
-                        //LOGIN EMAIL + SENHA REGISTRADA
-                        //LOGIN EMAIL + SENHA REGISTRADA
-                      },
+                          icon: SvgPicture.asset(
+                            "assets/icons/finger_print.svg",
+                            height: 100,
+                            width: 100,
+                          ),
+                        ),
+                        IconButton(
+                          padding: EdgeInsets.zero,
+                          onPressed: () {
+                            // LOGIN CONTA APPLE
+                            // LOGIN CONTA APPLE
+                            // LOGIN CONTA APPLE
+                            // LOGIN CONTA APPLE
+                            // LOGIN CONTA APPLE
+                          },
+                          icon: SvgPicture.asset("assets/icons/apple.svg",
+                              height: 100, width: 100),
+                        ),
+                        IconButton(
+                            padding: EdgeInsets.zero,
+                            onPressed: () {
+                              //LOGIN CONTA GOOGLE
+                              //LOGIN CONTA GOOGLE
+                              //LOGIN CONTA GOOGLE
+                              //LOGIN CONTA GOOGLE
+                              //LOGIN CONTA GOOGLE
+                            },
+                            icon: SvgPicture.asset("assets/icons/gmail-80.svg",
+                                height: 100, width: 100)),
+                      ],
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: context.percentHeight(.08),
+                    ),
+                    Center(
+                      child: GenericBtn(
+                        label: "LOGIN",
+                        onPressed: () {
+                          if (formKey.currentState!.validate()) {
+                            //
+                            login();
+                            //
+                          }
+                        },
+                        width: double.infinity,
+                      ),
+                    ),
+                    SizedBox(height: context.percentHeight(0.08)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Não possui conta?",
+                            style: context.textStyles.textBold
+                                .copyWith(fontSize: 14)),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RegisterPage(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "CADASTRE-SE",
+                            style: context.textStyles.textBold
+                                .copyWith(color: Colors.blue),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Não possui conta?",
-                    style: context.textStyles.textBold.copyWith(fontSize: 14)),
-                TextButton(
-                  onPressed: () {
-                    //EFETUAR CADASTRO
-                    //EFETUAR CADASTRO
-                    //EFETUAR CADASTRO
-                    //EFETUAR CADASTRO
-                    //EFETUAR CADASTRO
-                  },
-                  child: Text(
-                    "CADASTRE-SE",
-                    style: context.textStyles.textBold
-                        .copyWith(color: Colors.blue),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -184,19 +201,19 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => const HomePage(),
           ),
         );
       }
-    } on FirebaseAuthException catch (error) {
-      if (error.code == "user-not-found") {
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "user-not-found") {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text("Usuário não encontrado"),
             backgroundColor: Colors.redAccent,
           ),
         );
-      } else if (error.code == "wrong-password") {
+      } else if (e.code == "wrong-password") {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text("Senha Errada"),
@@ -206,6 +223,4 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
-
-  register() async {}
 }

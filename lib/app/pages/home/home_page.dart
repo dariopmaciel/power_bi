@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
+import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
 import 'package:power_bi/app/pages/auth/validator_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,13 +35,17 @@ class _HomePageState extends State<HomePage> {
               accountName: Text("Usuário: $nome"),
               accountEmail: Text("E-mail: $email"),
             ),
-            ListTile(
-              dense: true,
-              title: const Text("SAIR"),
-              trailing: const Icon(Icons.exit_to_app),
-              onTap: () {
-                sair();
-              },
+            SingleChildScrollView(
+              child: Stack(
+                children: [
+                  GenericBtn(
+                      label: "SAIR",
+                      onPressed: () {
+                        logout();
+                      }),
+                  //GenericBtn(label: "label", onPressed: () {})
+                ],
+              ),
             ),
           ],
         ),
@@ -64,7 +69,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  sair() async {
+  logout() async {
     await _firebaseAuth.signOut().then(
           (user) => Navigator.pushReplacement(
             context,

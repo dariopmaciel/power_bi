@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -13,21 +15,39 @@ class ValidatorPage extends StatefulWidget {
 }
 
 class _ValidatorPageState extends State<ValidatorPage> {
+  StreamSubscription? streamSubscription;
+
   @override
   void initState() {
     super.initState();
 
-    FirebaseAuth.instance.authStateChanges().listen((User? user) {
-      if (user == null) {
-        print('USUÁRIO NÃO ESTÁ LOGADO!');
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
-      } else {
-        print('USUÁRIO ESTÁ LOGADO!');
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage()));
-      }
-    });
+    streamSubscription = FirebaseAuth.instance.authStateChanges().listen(
+      (User? user) {
+        if (user == null) {
+          //print('VOCÊ NÃO ESTÁ LOGADO');
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => LoginPage(),
+            ),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            ),
+          );
+          //print('VOCÊ ESTÁ LOGADO');
+        }
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    streamSubscription!.cancel();
+    super.dispose();
   }
 
   @override
