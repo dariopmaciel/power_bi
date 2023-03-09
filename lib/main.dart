@@ -11,12 +11,7 @@ Future<void> main() async {
 
   app = await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform);
-  //auth = FirebaseAuth.instanceFor(app: app);
-
-  // if (shouldUseFirebaseEmulator) {
-  //   await auth.useAuthEmulator('localhost', 9099);
-  // }
-
+  
   runApp(const MyApp());
 }
 

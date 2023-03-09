@@ -42,6 +42,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   autofocus: true,
                   controller: _nameEC,
                   decoration: const InputDecoration(labelText: "Nome Completo"),
+                  keyboardType: TextInputType.name,
+                  textInputAction: TextInputAction.next,
                   validator: Validatorless.multiple([
                     Validatorless.required("*Obrigatório"),
                     Validatorless.min(3, "*Minimo 3 caracteres")
@@ -50,6 +52,8 @@ class _RegisterPageState extends State<RegisterPage> {
               TextFormField(
                   controller: _emailEC,
                   decoration: const InputDecoration(labelText: "Email"),
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
                   validator: Validatorless.multiple([
                     Validatorless.required("*Email obrigatório"),
                     Validatorless.email("*Email inválido")
@@ -58,6 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
               TextFormField(
                   obscureText: true,
                   controller: _pwdEC,
+                  textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
                     labelText: "Senha",
                   ),
@@ -68,6 +73,7 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: context.percentHeight(0.025)),
               TextFormField(
                   obscureText: true,
+                  textInputAction: TextInputAction.done,
                   decoration: const InputDecoration(
                     labelText: "Confirme Senha",
                   ),
