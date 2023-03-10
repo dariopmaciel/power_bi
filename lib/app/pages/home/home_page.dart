@@ -44,8 +44,9 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "PRODUÇÃO ATUAL",
-                    style: context.textStyles.textBold.copyWith(fontSize: 18),
+                    "DADOS DO USUÁRIO",
+                    style:
+                        context.textStyles.textExtraBold.copyWith(fontSize: 18),
                   ),
                   SizedBox(height: context.percentHeight(0.01)),
                   Container(
@@ -55,23 +56,16 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         ListTile(
-                          dense: false,
-                          title: Text("TEMPO DE PRODUÇÃO"),
+                          title: Text("PERFIL",
+                              style: context.textStyles.textBold
+                                  .copyWith(fontSize: 16)),
                           trailing: Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
                         ListTile(
-                          title: Text("TOTAL PERDA E QUEBRA"),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          title: Text("QTD TOTAL DE MANUTENÇÃO \nEM PRODUÇÃO"),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          title: Text("TEMPO DE EXPEDIÇÃO"),
+                          title: Text("HISTÓRICO",
+                              style: context.textStyles.textBold
+                                  .copyWith(fontSize: 16)),
                           trailing: Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
@@ -82,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: context.percentHeight(0.02)),
                   //
                   Text(
-                    "PÓS VENDAS",
+                    "DADOS DA CONTA",
                     style: context.textStyles.textBold.copyWith(fontSize: 18),
                   ),
                   SizedBox(height: context.percentHeight(0.01)),
@@ -93,26 +87,9 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         ListTile(
-                          splashColor: Color(0xff1A4CAB),
-                          title: Text("TEMPO MÉDIO DE \nATENDIMENTO HELP DESK"),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          splashColor: Color(0xff1A4CAB),
-                          title: Text("TEMPO MÉDIO MANUTENÇÃO"),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          splashColor: Color(0xff1A4CAB),
-                          title: Text("QTD TOTAL DE MANUTENÇÃO \nEM PRODUÇÃO"),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          splashColor: Color(0xff1A4CAB),
-                          title: Text("TEMPO MÉDIO EXPEDIÇÃ AO CLIENTE"),
+                          title: Text("PREFERENCIAS",
+                              style: context.textStyles.textBold
+                                  .copyWith(fontSize: 16)),
                           trailing: Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
@@ -128,10 +105,11 @@ class _HomePageState extends State<HomePage> {
                     child: ListTile(
                       dense: true,
                       onTap: () => logout(),
-                      title: const Text(
+                      title: Text(
                         "SAIR",
-                        style: TextStyle(color: Colors.white),
                         textAlign: TextAlign.center,
+                        style: context.textStyles.textBold
+                            .copyWith(fontSize: 16, color: Colors.white),
                       ),
                     ),
                   ),
