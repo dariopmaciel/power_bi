@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:power_bi/app/core/ui/helpers/size_extensions.dart';
+import 'package:power_bi/app/core/ui/styles/app_styles.dart';
 import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
@@ -119,9 +120,189 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Center(
-        child: Container(
-          color: Colors.grey,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "VENDAS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "PÓS \nVENDAS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "FISCAL",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "FINANCEIRO",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "PRODUÇÃO",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "TI",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 24),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "DEPOSITO DE \nMATÉRIAS PRIMAS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "DEPOSITO DE \nMATERIAIS ACABADOS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "COMPRAS \nNACIONAIS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: SizedBox(
+                      height: context.screenHeight * 0.13,
+                      width: context.screenWidth * 0.37,
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "COMPRAS \nINTERNACIONAIS",
+                          style: context.textStyles.textBold
+                              .copyWith(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
