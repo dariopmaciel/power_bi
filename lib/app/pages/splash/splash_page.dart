@@ -20,9 +20,9 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         children: [
           Align(
-            heightFactor: 2.5,
+            heightFactor: 1.5,
             child: SizedBox(
-              width: context.percentHeight(0.98),
+              width: context.percentHeight(0.5),
               child: Image.asset(
                 "assets/images/MultiComp-Banner.png",
                 fit: BoxFit.cover,

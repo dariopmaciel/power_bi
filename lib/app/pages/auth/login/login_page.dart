@@ -62,8 +62,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       validator: Validatorless.multiple(
                         [
-                          Validatorless.required('Email is required'),
-                          Validatorless.email('Invalid email'),
+                          Validatorless.required('*E-mail necessário!'),
+                          Validatorless.email('*E-mail inválido'),
                         ],
                       ),
                     ),
@@ -91,11 +91,11 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       validator: Validatorless.multiple([
-                        Validatorless.required('Password is required'),
+                        Validatorless.required('*Password necessário!'),
                         Validatorless.min(
-                            6, 'Password must be at least 6 characters'),
+                            6, '*Mínimo 6 caracteres.'),
                         Validatorless.max(
-                            20, 'Password must be at most 20 characters'),
+                            20, '*Máximo 20 caracteres.'),
                       ]),
                     ),
                     SizedBox(height: context.percentHeight(.08)),

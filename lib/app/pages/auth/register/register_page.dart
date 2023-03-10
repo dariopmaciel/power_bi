@@ -30,6 +30,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Form(
           key: _formKey,
           child: ListView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               Text("Cadastro",
                   style:
