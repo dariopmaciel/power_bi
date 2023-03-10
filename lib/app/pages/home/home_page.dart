@@ -1,11 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:power_bi/app/core/ui/helpers/size_extensions.dart';
 import 'package:power_bi/app/core/ui/styles/app_styles.dart';
 import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
 import 'package:power_bi/app/pages/auth/validator_page.dart';
+import 'package:power_bi/app/pages/home/reports/r01_vendas_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -130,7 +132,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- OK
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -145,7 +158,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -165,7 +189,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -180,7 +215,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -200,7 +246,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -215,14 +272,25 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
                       child: Center(
                         child: Text(
                           textAlign: TextAlign.center,
-                          "TI",
+                          "EXPEDIÇÃO",
                           style: context.textStyles.textBold
                               .copyWith(fontSize: 24),
                         ),
@@ -235,7 +303,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -250,7 +329,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -270,7 +360,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
@@ -285,7 +386,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child:
+                              const R01VendasPage(), //    <--------------------- TROCAR
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          reverseDuration: const Duration(milliseconds: 400),
+                        ),
+                      );
+                    },
                     child: SizedBox(
                       height: context.screenHeight * 0.13,
                       width: context.screenWidth * 0.37,
