@@ -11,10 +11,10 @@ class GenericAppbar extends AppBar {
           centerTitle: true,
           toolbarHeight: 120,
           title: Padding(
-            padding: const EdgeInsets.only(top: 25),
+            padding: const EdgeInsets.only(top: 45),
             child: Image.asset(
               "assets/images/MultiComp-Banner.png",
-              width: 275,
+              width: 210,
             ),
           ),
         );

@@ -50,8 +50,8 @@ class _HomePageState extends State<HomePage> {
                   Image.asset("assets/images/MultiComp-LOGO.png"),
             ),
             SingleChildScrollView(
-              physics: NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.all(8),
+              physics: const NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -71,14 +71,14 @@ class _HomePageState extends State<HomePage> {
                           title: Text("PERFIL",
                               style: context.textStyles.textBold
                                   .copyWith(fontSize: 16)),
-                          trailing: Icon(Icons.arrow_forward_ios),
+                          trailing: const Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
                         ListTile(
                           title: Text("HISTÓRICO",
                               style: context.textStyles.textBold
                                   .copyWith(fontSize: 16)),
-                          trailing: Icon(Icons.arrow_forward_ios),
+                          trailing: const Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
                       ],
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                           title: Text("PREFERENCIAS",
                               style: context.textStyles.textBold
                                   .copyWith(fontSize: 16)),
-                          trailing: Icon(Icons.arrow_forward_ios),
+                          trailing: const Icon(Icons.arrow_forward_ios),
                           onTap: () {},
                         ),
                       ],
@@ -286,7 +286,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R06Expedicao(), //    <--------------------- TROCAR
+                              const R06Expedicao(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -374,7 +374,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R09ComprasNac(), //    <--------------------- TROCAR
+                              const R09ComprasNac(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -400,7 +400,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R10ComprasInter(), //    <--------------------- TROCAR
+                              const R10ComprasInter(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
