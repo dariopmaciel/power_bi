@@ -20,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         children: [
           Align(
-            heightFactor: 1.5,
+            heightFactor: 1.2,
             child: SizedBox(
               width: context.percentHeight(0.5),
               child: Image.asset(
@@ -32,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
           Center(
             child: Column(
               children: [
-                SizedBox(height: context.percentHeight(0.27)),
+                SizedBox(height: context.percentHeight(0.25)),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),

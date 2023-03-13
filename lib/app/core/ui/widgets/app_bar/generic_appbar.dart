@@ -10,9 +10,12 @@ class GenericAppbar extends AppBar {
           backgroundColor: Colors.white,
           centerTitle: true,
           toolbarHeight: 120,
-          title: Image.asset(
-            "assets/images/MultiComp-Banner.png",
-            width: 275,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 25),
+            child: Image.asset(
+              "assets/images/MultiComp-Banner.png",
+              width: 275,
+            ),
           ),
         );
 }
