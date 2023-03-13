@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:power_bi/app/core/ui/helpers/size_extensions.dart';
-import 'package:power_bi/app/core/ui/styles/colors_app.dart';
-import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/reports/generic_report_1x4.dart';
 
-class R01VendasPage extends StatelessWidget {
-  const R01VendasPage({super.key});
+class R09ComprasNac extends StatelessWidget {
+  const R09ComprasNac({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GenericAppbar(),
       body: GenericReport1x4(
-        label0: "Relatorios - Vendas",
-        label1: "Previsto X Realizado",
+        label0: "Relatórios - Compras Nacionais",
+        label1: "label1",
         onPressed1: () {},
-        label2: "Acumulado 3",
+        label2: "label2",
         onPressed2: () {},
-        label3: "Acumulado 6",
+        label3: "label3",
         onPressed3: () {},
-        label4: "Acumulado 12",
+        label4: "label4",
         onPressed4: () {},
       ),
     );

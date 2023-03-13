@@ -13,7 +13,7 @@ class R0200PosVendas extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: GenericReport1x4(
-        label0: "Relatórios de Pós Vendas",
+        label0: "Relatórios - Pós Vendas",
         label1: "Tempo de atendimento HelpDesk",
         onPressed1: () {},
         label2: "Tempo de Liberação NF",

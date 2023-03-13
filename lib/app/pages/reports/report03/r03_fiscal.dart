@@ -11,7 +11,7 @@ class R03Fiscal extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: GenericReport1x2(
-        label0: "Relatórios Fiscais",
+        label0: "Relatórios - Fiscais",
         label1: "Emissão de NF Incorretas e Ofensores",
         onPressed1: () {},
         label2: "Ofensores - Acumulados 12",

@@ -10,7 +10,7 @@ class R05Producao extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: GenericReport1x4(
-        label0: "Relatórios de Produção",
+        label0: "Relatórios - Produção",
         label1: "Previsto X Realizado de Produção",
         onPressed1: () {},
         label2: "Manutenção Interna - QTD",

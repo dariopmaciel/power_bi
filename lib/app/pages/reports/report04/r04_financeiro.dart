@@ -10,7 +10,7 @@ class R04Financeiro extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: GenericReport1x2(
-        label0: "Relatórios Financieros",
+        label0: "Relatórios - Financieros",
         label1: "Atraso no Recebimento (%Monetário)",
         onPressed1: () {},
         label2: "Ofensores - Acumulado 12",
