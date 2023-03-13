@@ -7,11 +7,11 @@ import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
 import 'package:power_bi/app/pages/auth/validator_page.dart';
-import 'package:power_bi/app/pages/reports/r01_vendas_page.dart';
-import 'package:power_bi/app/pages/reports/r02_pos_vendas.dart';
-import 'package:power_bi/app/pages/reports/r03_fiscal.dart';
-import 'package:power_bi/app/pages/reports/r04_financeiro.dart';
-import 'package:power_bi/app/pages/reports/r05_producao.dart';
+import 'package:power_bi/app/pages/reports/report01/r01_vendas_page.dart';
+import 'package:power_bi/app/pages/reports/report02/r02_00_pos_vendas.dart';
+import 'package:power_bi/app/pages/reports/report03/r03_fiscal.dart';
+import 'package:power_bi/app/pages/reports/report04/r04_financeiro.dart';
+import 'package:power_bi/app/pages/reports/report05/r05_producao.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R02PosVendas(), //    <--------------------- TROCA
+                              const R0200PosVendas(), //    <--------------------- TROCA
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
