@@ -17,9 +17,8 @@ class GenericBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Colors.red;
     return SizedBox(
-      width: 200,
+      width: width,
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,

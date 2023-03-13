@@ -14,6 +14,7 @@ class ColorsApp {
   Color get secondary => Color(0xffD13333);
   Color get tertiary => Colors.black;
   Color get quatyary => Colors.white;
+  Color get fifth => Colors.transparent;
 }
 
 //extenção para enviar as cores, primaria e secundário, para as BuildContexts
