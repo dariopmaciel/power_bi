@@ -8,6 +8,8 @@ import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
 import 'package:power_bi/app/pages/auth/validator_page.dart';
 import 'package:power_bi/app/pages/reports/r01_vendas_page.dart';
+import 'package:power_bi/app/pages/reports/r02_pos_vendas.dart';
+import 'package:power_bi/app/pages/reports/r03_fiscal.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -163,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R01VendasPage(), //    <--------------------- TROCAR
+                              const R02PosVendas(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -194,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R01VendasPage(), //    <--------------------- TROCAR
+                              const R03Fiscal(), //    <--------------------- TROCAR
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
