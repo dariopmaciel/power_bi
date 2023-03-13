@@ -9,9 +9,10 @@ class R01VendasPage extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: Container(
+          color: Colors.blue,
           child: Center(
-        child: Text("RELATÓRIO DE VENDAS"),
-      )),
+            child: Text("RELATÓRIO DE VENDAS"),
+          )),
     );
   }
 }

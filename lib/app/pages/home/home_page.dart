@@ -7,7 +7,7 @@ import 'package:power_bi/app/core/ui/styles/text_styles.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/btn/generic_btn.dart';
 import 'package:power_bi/app/pages/auth/validator_page.dart';
-import 'package:power_bi/app/pages/home/reports/r01_vendas_page.dart';
+import 'package:power_bi/app/pages/reports/r01_vendas_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

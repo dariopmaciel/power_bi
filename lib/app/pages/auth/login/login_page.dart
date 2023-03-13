@@ -92,10 +92,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       validator: Validatorless.multiple([
                         Validatorless.required('*Password necessário!'),
-                        Validatorless.min(
-                            6, '*Mínimo 6 caracteres.'),
-                        Validatorless.max(
-                            20, '*Máximo 20 caracteres.'),
+                        Validatorless.min(6, '*Mínimo 6 caracteres.'),
+                        Validatorless.max(20, '*Máximo 20 caracteres.'),
                       ]),
                     ),
                     SizedBox(height: context.percentHeight(.08)),

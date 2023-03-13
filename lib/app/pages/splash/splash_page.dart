@@ -54,28 +54,70 @@ class _SplashPageState extends State<SplashPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Image.asset("assets/images/baner-01.png",
-                                  width: 180, height: 70),
-                              Image.asset("assets/images/baner-03.png",
-                                  width: 180, height: 70),
+                              Container(
+                                height: 70,
+                                width: 180,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_Industry.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                              Container(
+                                height: 70,
+                                width: 180,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_Business.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Image.asset("assets/images/baner-02.png",
-                                  width: 180, height: 70),
-                              Image.asset("assets/images/baner-04.png",
-                                  width: 180, height: 70),
+                              Container(
+                                height: 70,
+                                width: 180,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_GasStation.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                              Container(
+                                height: 70,
+                                width: 180,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_website.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Image.asset("assets/images/baner-06.png",
-                                  width: 180, height: 70),
-                              Image.asset("assets/images/baner-05.png",
-                                  width: 180, height: 70),
+                              Container(
+                                width: 180,
+                                height: 60,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_e-fiscal.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                              Container(
+                                width: 180,
+                                height: 60,
+                                color: Colors.white,
+                                child: Image.asset(
+                                  "assets/images/banner_SeuSoftware.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
                             ],
                           ),
                           Padding(
