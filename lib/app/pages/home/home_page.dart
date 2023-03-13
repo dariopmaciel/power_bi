@@ -10,6 +10,8 @@ import 'package:power_bi/app/pages/auth/validator_page.dart';
 import 'package:power_bi/app/pages/reports/r01_vendas_page.dart';
 import 'package:power_bi/app/pages/reports/r02_pos_vendas.dart';
 import 'package:power_bi/app/pages/reports/r03_fiscal.dart';
+import 'package:power_bi/app/pages/reports/r04_financeiro.dart';
+import 'package:power_bi/app/pages/reports/r05_producao.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -165,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R02PosVendas(), //    <--------------------- ok
+                              const R02PosVendas(), //    <--------------------- TROCA
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -196,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R03Fiscal(), //    <--------------------- TROCAR
+                              const R03Fiscal(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -221,8 +223,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         PageTransition(
-                          child:
-                              const R01VendasPage(), //    <--------------------- TROCAR
+                          child: const R04Financeiro(), //
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),
@@ -253,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         PageTransition(
                           child:
-                              const R01VendasPage(), //    <--------------------- TROCAR
+                              const R05Producao(), //    <--------------------- ok
                           type: PageTransitionType.rightToLeft,
                           duration: const Duration(milliseconds: 400),
                           reverseDuration: const Duration(milliseconds: 400),

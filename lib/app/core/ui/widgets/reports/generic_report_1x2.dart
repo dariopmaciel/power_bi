@@ -49,7 +49,7 @@ class GenericReport1x2 extends StatelessWidget {
                     ),
                     child: Text(
                       label1,
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     ),
                   ),
                 ),
