@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:power_bi/app/core/ui/widgets/app_bar/generic_appbar.dart';
 import 'package:power_bi/app/core/ui/widgets/reports/generic_report_1x2.dart';
-import 'package:power_bi/app/core/ui/widgets/reports/generic_report_1x3.dart';
 
 class R03Fiscal extends StatelessWidget {
   const R03Fiscal({super.key});

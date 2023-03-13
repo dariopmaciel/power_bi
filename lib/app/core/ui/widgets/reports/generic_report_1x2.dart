@@ -47,9 +47,17 @@ class GenericReport1x2 extends StatelessWidget {
                         context.percentHeight(0.30),
                       ),
                     ),
-                    child: Text(
-                      label1,
-                      style: const TextStyle(color: Colors.black),
+                    child: Container(
+                      //color: Colors.blue,
+                      height: context.percentWidth(0.55),
+                      width: context.percentHeight(1),
+                      child: Text(
+                        label1,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          //backgroundColor: Colors.red,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -64,9 +72,14 @@ class GenericReport1x2 extends StatelessWidget {
                         context.percentHeight(0.30),
                       ),
                     ),
-                    child: Text(
-                      label2,
-                      style: TextStyle(color: Colors.black),
+                    child: Container(
+                      color: Colors.transparent,
+                      height: context.percentWidth(0.55),
+                      width: context.percentHeight(1),
+                      child: Text(
+                        label2,
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   ),
                 ),
