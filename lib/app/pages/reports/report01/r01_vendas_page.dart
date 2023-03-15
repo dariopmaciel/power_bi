@@ -17,7 +17,7 @@ class R01VendasPage extends StatelessWidget {
       body: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 8.0, left: 8, right: 8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,97 +27,115 @@ class R01VendasPage extends StatelessWidget {
                 child: Text("Relatórios - Vendas",
                     style: context.textStyles.textBold.copyWith(fontSize: 28)),
               ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffD9DFEB),
-                  minimumSize: Size(
-                    context.percentWidth(1),
-                    context.percentHeight(0.15),
-                  ),
+//----------------->
+              Container(
+                height: context.percentWidth(0.25),
+                width: context.percentHeight(1),
+                decoration: BoxDecoration(
+                  color: Color(0xffD9DFEB),
+                  borderRadius: BorderRadius.circular(7),
                 ),
-                child: SizedBox(
-                  height: context.percentWidth(0.25),
-                  width: context.percentHeight(1),
-                  child: Column(
-                    children: [
-                      const Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "Previsto X Realizado Mensal: [Dez/2021]",
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                child: Column(
+                  children: [
+                    const Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Previsto X Realizado Mensal: [Dez/2021]",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: context.percentWidth(0.001)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            alignment: Alignment.topLeft,
-                            height: context.percentHeight(0.09),
-                            width: context.percentWidth(0.4),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(7),
-                                color: context.colors.primary),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    children: const [
-                                      Text("Prevista: "),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: context.percentHeight(0.01),
-                                  ),
-                                  Text(
-                                    "[R 5.000.000,00]",
-                                    style: context.textStyles.textBold.copyWith(
-                                      fontSize: context.percentHeight(0.018),
+                    ),
+                    SizedBox(height: context.percentWidth(0.001)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                          alignment: Alignment.topLeft,
+                          height: context.percentHeight(0.09),
+                          width: context.percentWidth(0.4),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(7),
+                              color: context.colors.primary),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Prevista: ",
+                                      style: context.textStyles.textBold
+                                          .copyWith(
+                                              fontSize:
+                                                  context.percentHeight(0.018),
+                                              color: Colors.white),
                                     ),
-                                  ),
-                                ],
-                              ),
+                                  ],
+                                ),
+                                SizedBox(height: context.percentHeight(0.01)),
+                                Text(
+                                  "[R 5.000.000,00]",
+                                  style: context.textStyles.textBold.copyWith(
+                                      fontSize: context.percentHeight(0.018),
+                                      color: Colors.white),
+                                ),
+                              ],
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.topLeft,
-                            height: context.percentHeight(0.09),
-                            width: context.percentWidth(0.4),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(7),
-                                color: context.colors.primary),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    children: const [
-                                      Text("Realizada: [92%]"),
-                                    ],
-                                  ),
-                                  SizedBox(height: context.percentHeight(0.01)),
-                                  Text(
-                                    "[R 4.600.000,00]",
-                                    style: context.textStyles.textBold.copyWith(
-                                      fontSize: context.percentHeight(0.018),
+                        ),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          height: context.percentHeight(0.09),
+                          width: context.percentWidth(0.4),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(7),
+                              color: context.colors.primary),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Realizada: [96%]",
+                                      style: context.textStyles.textBold
+                                          .copyWith(
+                                              fontSize:
+                                                  context.percentHeight(0.018),
+                                              color: Colors.white),
                                     ),
-                                  ),
-                                ],
-                              ),
+                                  ],
+                                ),
+                                SizedBox(height: context.percentHeight(0.01)),
+                                Text(
+                                  "[R 4.600.000,00]",
+                                  style: context.textStyles.textBold.copyWith(
+                                      fontSize: context.percentHeight(0.018),
+                                      color: Colors.white),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
+//----------------->
+              // SizedBox(height: context.percentHeight(0.01)),
+              // Container(
+              //   height: context.screenHeight * 1,
+              //   width: context.screenWidth * 1,
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(7),
+              //     color: const Color(0xffD9DFEB),
+              //   ),
+              // ),
             ],
           ),
         ),
@@ -125,10 +143,3 @@ class R01VendasPage extends StatelessWidget {
     );
   }
 }
-
-
-/*
-height: context.percentHeight(0.07),
-                        width: context.percentWidth(0.4),
-                        child: const Text("data"),
-*/
