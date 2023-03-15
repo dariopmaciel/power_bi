@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenericAppbar(),
+      appBar: GenericAppbar(elevation: 1),
       body: Form(
         key: formKey,
         child: Stack(
@@ -41,11 +41,12 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: SingleChildScrollView(
-                physics: const NeverScrollableScrollPhysics(),
+                reverse: true,
+                //physics: const NeverScrollableScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: context.percentHeight(0.02)),
+                    SizedBox(height: context.percentHeight(0.04)),
                     Text(
                       "Login",
                       style: context.textStyles.textExtraBold
@@ -67,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    SizedBox(height: context.percentHeight(0.05)),
+                    SizedBox(height: context.percentHeight(0.04)),
                     TextFormField(
                       controller: _pwdEC,
                       obscureText: _showPWD == false ? true : false,
@@ -96,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                         Validatorless.max(20, '*Máximo 20 caracteres.'),
                       ]),
                     ),
-                    SizedBox(height: context.percentHeight(.08)),
+                    SizedBox(height: context.percentHeight(.02)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -140,9 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                                 height: 100, width: 100)),
                       ],
                     ),
-                    SizedBox(
-                      height: context.percentHeight(.08),
-                    ),
+                    SizedBox(height: context.percentHeight(.02)),
                     Center(
                       child: GenericBtn(
                         label: "LOGIN",

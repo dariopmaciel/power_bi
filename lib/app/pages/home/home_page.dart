@@ -37,7 +37,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    
+
+
     return Scaffold(
+      //resizeToAvoidBottomInset: false,
       appBar: GenericAppbar(),
       drawer: Drawer(
         child: ListView(
@@ -132,7 +136,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(5.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
