@@ -1,0 +1,119 @@
+[
+ {
+  "Mês_Ano": "Jan-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 5650000,
+  "Conforme %": 1.13,
+  "Não Conforme %": 0.13,
+  "Meta % ": 0.85,
+  "Acumulado": 650000
+ },
+ {
+  "Mês_Ano": "Feb-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4150000,
+  "Conforme %": 0.83,
+  "Não Conforme %": -0.17,
+  "Meta % ": 0.85,
+  "Acumulado": -850000
+ },
+ {
+  "Mês_Ano": "Mar-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3600000,
+  "Conforme %": 0.72,
+  "Não Conforme %": -0.28,
+  "Meta % ": 0.85,
+  "Acumulado": -1400000
+ },
+ {
+  "Mês_Ano": "Apr-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3350000,
+  "Conforme %": 0.67,
+  "Não Conforme %": -0.33,
+  "Meta % ": 0.85,
+  "Acumulado": -1650000
+ },
+ {
+  "Mês_Ano": "May-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3350000,
+  "Conforme %": 0.67,
+  "Não Conforme %": -0.33,
+  "Meta % ": 0.85,
+  "Acumulado": -1650000
+ },
+ {
+  "Mês_Ano": "Jun-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4500000,
+  "Conforme %": 0.9,
+  "Não Conforme %": -0.1,
+  "Meta % ": 0.85,
+  "Acumulado": -500000
+ },
+ {
+  "Mês_Ano": "Jul-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3900000,
+  "Conforme %": 0.78,
+  "Não Conforme %": -0.22,
+  "Meta % ": 0.85,
+  "Acumulado": -1100000
+ },
+ {
+  "Mês_Ano": "Aug-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4400000,
+  "Conforme %": 0.88,
+  "Não Conforme %": -0.12,
+  "Meta % ": 0.85,
+  "Acumulado": -600000
+ },
+ {
+  "Mês_Ano": "Sep-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4500000,
+  "Conforme %": 0.9,
+  "Não Conforme %": -0.1,
+  "Meta % ": 0.85,
+  "Acumulado": -500000
+ },
+ {
+  "Mês_Ano": "Oct-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 7000000,
+  "Conforme %": 1.4,
+  "Não Conforme %": 0.4,
+  "Meta % ": 0.85,
+  "Acumulado": 2000000
+ },
+ {
+  "Mês_Ano": "Nov-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 8500000,
+  "Conforme %": 1.7,
+  "Não Conforme %": 0.7,
+  "Meta % ": 0.85,
+  "Acumulado": 3500000
+ },
+ {
+  "Mês_Ano": "Dec-21",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 9000000,
+  "Conforme %": 1.8,
+  "Não Conforme %": 0.8,
+  "Meta % ": 0.85,
+  "Acumulado": 4000000
+ },
+ {
+  "Mês_Ano": "TOTAL",
+  "Meta Mensal": 60000000,
+  "Meta Realizada": 61900000,
+  "Conforme %": 1.03166666666667,
+  "Não Conforme %": 0.0316666666666667,
+  "Meta % ": 0.85,
+  "Acumulado": 1900000
+ }
+]
