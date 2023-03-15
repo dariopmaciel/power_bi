@@ -24,83 +24,81 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: GenericAppbar(),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: SingleChildScrollView(
           reverse: true,
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: Form(
-              key: _formKey,
-              child: Column(
-                children: [
-                  Text(
-                    "Cadastro",
-                    style:
-                        context.textStyles.textExtraBold.copyWith(fontSize: 30),
-                  ),
-                  SizedBox(height: context.percentHeight(0.02)),
-                  Text("Preencha os campos abaixo para criar o seu cadastro",
-                      style:
-                          context.textStyles.textBold.copyWith(fontSize: 18)),
-                  SizedBox(height: context.percentHeight(0.01)),
-                  TextFormField(
-                      //autofocus: true,
-                      controller: _nameEC,
-                      decoration:
-                          const InputDecoration(labelText: "Nome Completo"),
-                      keyboardType: TextInputType.name,
-                      textInputAction: TextInputAction.next,
-                      validator: Validatorless.multiple([
-                        Validatorless.required("*Obrigatório"),
-                        Validatorless.min(3, "*Minimo 3 caracteres")
-                      ])),
-                  SizedBox(height: context.percentHeight(0.025)),
-                  TextFormField(
-                      controller: _emailEC,
-                      decoration: const InputDecoration(labelText: "Email"),
-                      keyboardType: TextInputType.emailAddress,
-                      textInputAction: TextInputAction.next,
-                      validator: Validatorless.multiple([
-                        Validatorless.required("*Email obrigatório"),
-                        Validatorless.email("*Email inválido")
-                      ])),
-                  SizedBox(height: context.percentHeight(0.025)),
-                  TextFormField(
-                      obscureText: true,
-                      controller: _pwdEC,
-                      textInputAction: TextInputAction.next,
-                      decoration: const InputDecoration(
-                        labelText: "Senha",
-                      ),
-                      validator: Validatorless.multiple([
-                        Validatorless.required("*Senha Obrigatória"),
-                        Validatorless.min(3, "*Minimo 3 caracteres")
-                      ])),
-                  SizedBox(height: context.percentHeight(0.025)),
-                  TextFormField(
-                      obscureText: true,
-                      textInputAction: TextInputAction.done,
-                      decoration: const InputDecoration(
-                        labelText: "Confirme Senha",
-                      ),
-                      validator: Validatorless.multiple([
-                        Validatorless.required("*Confirmação obrigatória"),
-                        Validatorless.compare(_pwdEC, "*SENHAS NÃO CONFEREM")
-                      ])),
-                  SizedBox(height: context.percentHeight(0.02)),
-                  GenericBtn(
-                    label: "CADASTRAR",
-                    onPressed: () {
-                      final valid = _formKey.currentState?.validate() ?? false;
-                      if (valid) {
-                        cadastrar();
-                      }
-                    },
-                  ),
-                ],
-              ),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                Text(
+                  "Efetue seu cadastro",
+                  style:
+                      context.textStyles.textExtraBold.copyWith(fontSize: 30),
+                ),
+                SizedBox(height: context.percentHeight(0.02)),
+                Text("Preencha os campos abaixo para criar o seu cadastro",
+                    style: context.textStyles.textBold.copyWith(fontSize: 18)),
+                SizedBox(height: context.percentHeight(0.022)),
+                TextFormField(
+                    //autofocus: true,
+                    controller: _nameEC,
+                    decoration:
+                        const InputDecoration(labelText: "Nome Completo"),
+                    keyboardType: TextInputType.name,
+                    textInputAction: TextInputAction.next,
+                    validator: Validatorless.multiple([
+                      Validatorless.required("*Obrigatório"),
+                      Validatorless.min(3, "*Minimo 3 caracteres")
+                    ])),
+                SizedBox(height: context.percentHeight(0.022)),
+                TextFormField(
+                    controller: _emailEC,
+                    decoration: const InputDecoration(labelText: "Email"),
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    validator: Validatorless.multiple([
+                      Validatorless.required("*Email obrigatório"),
+                      Validatorless.email("*Email inválido")
+                    ])),
+                SizedBox(height: context.percentHeight(0.022)),
+                TextFormField(
+                    obscureText: true,
+                    controller: _pwdEC,
+                    textInputAction: TextInputAction.next,
+                    decoration: const InputDecoration(
+                      labelText: "Senha",
+                    ),
+                    validator: Validatorless.multiple([
+                      Validatorless.required("*Senha Obrigatória"),
+                      Validatorless.min(3, "*Minimo 3 caracteres")
+                    ])),
+                SizedBox(height: context.percentHeight(0.022)),
+                TextFormField(
+                    obscureText: true,
+                    textInputAction: TextInputAction.done,
+                    decoration: const InputDecoration(
+                      labelText: "Confirme Senha",
+                    ),
+                    validator: Validatorless.multiple([
+                      Validatorless.required("*Confirmação obrigatória"),
+                      Validatorless.compare(_pwdEC, "*SENHAS NÃO CONFEREM")
+                    ])),
+                SizedBox(height: context.percentHeight(0.02)),
+                GenericBtn(
+                  label: "CADASTRAR",
+                  width: context.percentWidth(1),
+                  onPressed: () {
+                    final valid = _formKey.currentState?.validate() ?? false;
+                    if (valid) {
+                      cadastrar();
+                    }
+                  },
+                ),
+              ],
             ),
           ),
         ),

@@ -12,7 +12,7 @@ class GenericBtn extends StatelessWidget {
     required this.label,
     required this.onPressed,
     this.width,
-    this.height = 50,
+    this.height,
   });
 
   @override
