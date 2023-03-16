@@ -4,14 +4,13 @@ import 'package:power_bi/app/core/ui/theme/theme_config.dart';
 import 'package:power_bi/app/firebase/firebase_options.dart';
 import 'package:power_bi/app/pages/splash/splash_page.dart';
 
-late final FirebaseApp app;
+//late final FirebaseApp app;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  app = await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform);
-  
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(const MyApp());
 }
 
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Business Inteligence',
       theme: ThemeConfig.theme,
-      home: SplashPage(),
+      home: const SplashPage(),
     );
   }
 }

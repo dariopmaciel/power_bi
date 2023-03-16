@@ -1,0 +1,29 @@
+[
+ {
+  "Mês_Ano": "Jan-23",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4500000,
+  "Conforme %": 0.9,
+  "Não Conforme %": -0.1,
+  "Meta % ": 0.85,
+  "Acumulado": -500000
+ },
+ {
+  "Mês_Ano": "Feb-23",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3350000,
+  "Conforme %": 0.67,
+  "Não Conforme %": -0.33,
+  "Meta % ": 0.85,
+  "Acumulado": -1650000
+ },
+ {
+  "Mês_Ano": "Mar-23",
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3350000,
+  "Conforme %": 0.67,
+  "Não Conforme %": -0.33,
+  "Meta % ": 0.85,
+  "Acumulado": -1650000
+ }
+]

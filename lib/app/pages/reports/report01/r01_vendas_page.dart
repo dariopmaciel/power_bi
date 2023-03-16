@@ -22,12 +22,13 @@ class R01VendasPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Align(
-                alignment: Alignment.topLeft,
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                //alignment: Alignment.topLeft,
                 child: Text("Relatórios - Vendas",
                     style: context.textStyles.textBold.copyWith(fontSize: 28)),
               ),
-//----------------->
+//----------------->RESUMO
               Container(
                 height: context.percentWidth(0.25),
                 width: context.percentHeight(1),
@@ -39,15 +40,20 @@ class R01VendasPage extends StatelessWidget {
                   children: [
                     const Align(
                       alignment: Alignment.topLeft,
-                      child: Text(
-                        "Previsto X Realizado Mensal: [Dez/2021]",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16.0),
+                        child: Text(
+                          "Previsto X Realizado Mensal: [Mar/2023]",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(height: context.percentWidth(0.001)),
+                    SizedBox(
+                      height: context.percentWidth(0.001),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -126,16 +132,18 @@ class R01VendasPage extends StatelessWidget {
                   ],
                 ),
               ),
-//----------------->
-              // SizedBox(height: context.percentHeight(0.01)),
-              // Container(
-              //   height: context.screenHeight * 1,
-              //   width: context.screenWidth * 1,
-              //   decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.circular(7),
-              //     color: const Color(0xffD9DFEB),
-              //   ),
-              // ),
+//----------------->CAMPO DO GRAFICO
+              SizedBox(height: context.percentHeight(0.01)),
+              Container(
+                height: context.screenHeight * 0.6,
+                width: context.screenWidth * 1,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: const Color(0xffD9DFEB),
+                ),
+//-------------->GRÁFICO
+                //child: ,
+              ),
             ],
           ),
         ),
