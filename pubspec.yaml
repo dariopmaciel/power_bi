@@ -42,6 +42,8 @@ dependencies:
   rive: ^0.9.1
   flutter_svg: ^1.1.6
   page_transition: ^2.0.9
+  cloud_firestore: ^4.4.4
+  firebase_database: ^10.0.15
   
 
 dev_dependencies:
