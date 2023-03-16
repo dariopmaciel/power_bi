@@ -142,7 +142,7 @@ class R01VendasPage extends StatelessWidget {
                   color: const Color(0xffD9DFEB),
                 ),
 //-------------->GRÁFICO
-                //child: ,
+                child: const Text("datdasdasdasa"),
               ),
             ],
           ),

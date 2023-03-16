@@ -1,6 +1,7 @@
 [
  {
-  "Mês_Ano": "Apr-22",
+  "Ano": 2022,
+  "Mes": 1,
   "Meta Mensal": 5000000,
   "Meta Realizada": 3600000,
   "Conforme %": 0.72,
@@ -9,7 +10,8 @@
   "Acumulado": -1400000
  },
  {
-  "Mês_Ano": "May-22",
+  "Ano": 2022,
+  "Mes": 2,
   "Meta Mensal": 5000000,
   "Meta Realizada": 4150000,
   "Conforme %": 0.83,
@@ -18,7 +20,8 @@
   "Acumulado": -850000
  },
  {
-  "Mês_Ano": "Jun-22",
+  "Ano": 2022,
+  "Mes": 3,
   "Meta Mensal": 5000000,
   "Meta Realizada": 5650000,
   "Conforme %": 1.13,
@@ -27,7 +30,38 @@
   "Acumulado": 650000
  },
  {
-  "Mês_Ano": "Jul-22",
+  "Ano": 2022,
+  "Mes": 4,
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 3600000,
+  "Conforme %": 0.72,
+  "Não Conforme %": -0.28,
+  "Meta % ": 0.85,
+  "Acumulado": -1400000
+ },
+ {
+  "Ano": 2022,
+  "Mes": 5,
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 4150000,
+  "Conforme %": 0.83,
+  "Não Conforme %": -0.17,
+  "Meta % ": 0.85,
+  "Acumulado": -850000
+ },
+ {
+  "Ano": 2022,
+  "Mes": 6,
+  "Meta Mensal": 5000000,
+  "Meta Realizada": 5650000,
+  "Conforme %": 1.13,
+  "Não Conforme %": 0.13,
+  "Meta % ": 0.85,
+  "Acumulado": 650000
+ },
+ {
+  "Ano": 2022,
+  "Mes": 7,
   "Meta Mensal": 5000000,
   "Meta Realizada": 9000000,
   "Conforme %": 1.8,
@@ -36,7 +70,8 @@
   "Acumulado": 4000000
  },
  {
-  "Mês_Ano": "Aug-22",
+  "Ano": 2022,
+  "Mes": 8,
   "Meta Mensal": 5000000,
   "Meta Realizada": 8500000,
   "Conforme %": 1.7,
@@ -45,7 +80,8 @@
   "Acumulado": 3500000
  },
  {
-  "Mês_Ano": "Sep-22",
+  "Ano": 2022,
+  "Mes": 9,
   "Meta Mensal": 5000000,
   "Meta Realizada": 7000000,
   "Conforme %": 1.4,
@@ -54,7 +90,8 @@
   "Acumulado": 2000000
  },
  {
-  "Mês_Ano": "Oct-22",
+  "Ano": 2022,
+  "Mes": 10,
   "Meta Mensal": 5000000,
   "Meta Realizada": 4500000,
   "Conforme %": 0.9,
@@ -63,7 +100,8 @@
   "Acumulado": -500000
  },
  {
-  "Mês_Ano": "Nov-22",
+  "Ano": 2022,
+  "Mes": 11,
   "Meta Mensal": 5000000,
   "Meta Realizada": 4400000,
   "Conforme %": 0.88,
@@ -72,7 +110,8 @@
   "Acumulado": -600000
  },
  {
-  "Mês_Ano": "Dec-22",
+  "Ano": 2022,
+  "Mes": 12,
   "Meta Mensal": 5000000,
   "Meta Realizada": 3900000,
   "Conforme %": 0.78,

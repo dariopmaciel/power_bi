@@ -1,6 +1,7 @@
 [
  {
-  "Mês_Ano": "Jan-23",
+  "Ano": 2023,
+  "Mes": 1,
   "Meta Mensal": 5000000,
   "Meta Realizada": 4500000,
   "Conforme %": 0.9,
@@ -9,7 +10,8 @@
   "Acumulado": -500000
  },
  {
-  "Mês_Ano": "Feb-23",
+  "Ano": 2023,
+  "Mes": 2,
   "Meta Mensal": 5000000,
   "Meta Realizada": 3350000,
   "Conforme %": 0.67,
@@ -18,7 +20,8 @@
   "Acumulado": -1650000
  },
  {
-  "Mês_Ano": "Mar-23",
+  "Ano": 2023,
+  "Mes": 3,
   "Meta Mensal": 5000000,
   "Meta Realizada": 3350000,
   "Conforme %": 0.67,
