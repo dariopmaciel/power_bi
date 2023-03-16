@@ -18,9 +18,12 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final formKey = GlobalKey<FormState>();
+  
   final _emailEC = TextEditingController();
   final _pwdEC = TextEditingController();
+
   final _firebaseAuth = FirebaseAuth.instance;
+  
   bool _showPWD = false;
 
   @override
@@ -167,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => RegisterPage(),
+                                builder: (context) => const RegisterPage(),
                               ),
                             );
                           },
