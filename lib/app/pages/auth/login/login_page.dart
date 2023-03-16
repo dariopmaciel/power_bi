@@ -18,13 +18,14 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final formKey = GlobalKey<FormState>();
-  
+
   final _emailEC = TextEditingController();
   final _pwdEC = TextEditingController();
 
   final _firebaseAuth = FirebaseAuth.instance;
-  
+
   bool _showPWD = false;
+  bool loading = false;
 
   @override
   void dispose() {
@@ -150,9 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                         label: "LOGIN",
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
-                            //
                             login();
-                            //
                           }
                         },
                         width: double.infinity,
@@ -223,4 +222,36 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
+
+  // login() async {
+  //   try {
+  //     UserCredential userCredential =
+  //         await _firebaseAuth.signInWithEmailAndPassword(
+  //             email: _emailEC.text, password: _pwdEC.text);
+  //     if (userCredential != null) {
+  //       Navigator.pushReplacement(
+  //         context,
+  //         MaterialPageRoute(
+  //           builder: (context) => const HomePage(),
+  //         ),
+  //       );
+  //     }
+  //   } on FirebaseAuthException catch (e) {
+  //     if (e.code == "user-not-found") {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(
+  //           content: Text("Usuário não encontrado"),
+  //           backgroundColor: Colors.redAccent,
+  //         ),
+  //       );
+  //     } else if (e.code == "wrong-password") {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(
+  //           content: Text("Senha Errada"),
+  //           backgroundColor: Colors.redAccent,
+  //         ),
+  //       );
+  //     }
+  //   }
+  // }
 }

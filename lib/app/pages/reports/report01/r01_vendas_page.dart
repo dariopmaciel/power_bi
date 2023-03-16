@@ -83,7 +83,7 @@ class R01VendasPage extends StatelessWidget {
                                 ),
                                 SizedBox(height: context.percentHeight(0.01)),
                                 Text(
-                                  "[R 5.000.000,00]",
+                                  "[R\$5.000.000,00]",
                                   style: context.textStyles.textBold.copyWith(
                                       fontSize: context.percentHeight(0.018),
                                       color: Colors.white),
@@ -118,7 +118,7 @@ class R01VendasPage extends StatelessWidget {
                                 ),
                                 SizedBox(height: context.percentHeight(0.01)),
                                 Text(
-                                  "[R 4.600.000,00]",
+                                  "[R\$4.600.000,00]",
                                   style: context.textStyles.textBold.copyWith(
                                       fontSize: context.percentHeight(0.018),
                                       color: Colors.white),
